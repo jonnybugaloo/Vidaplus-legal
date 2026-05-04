@@ -3,19 +3,19 @@
 This repository hosts the public legal documents for the [Vida+](https://github.com/jonnybugaloo/Vidaplus) wellness app, available in two languages:
 
 ## 🇧🇷 Português
-- 📋 [Política de Privacidade](https://jonnybugaloo.github.io/Vidaplus-legal/privacy-policy.html)
-- 📜 [Termos de Serviço](https://jonnybugaloo.github.io/Vidaplus-legal/terms-of-service.html)
-- 🗑️ [Excluir minha conta](https://jonnybugaloo.github.io/Vidaplus-legal/delete-account.html)
+- 📋 [Política de Privacidade](https://vidaplus.github.io/Vidaplus-legal/privacy-policy.html)
+- 📜 [Termos de Serviço](https://vidaplus.github.io/Vidaplus-legal/terms-of-service.html)
+- 🗑️ [Excluir minha conta](https://vidaplus.github.io/Vidaplus-legal/delete-account.html)
 
 ## 🇬🇧 English
-- 📋 [Privacy Policy](https://jonnybugaloo.github.io/Vidaplus-legal/privacy-policy.en.html)
-- 📜 [Terms of Service](https://jonnybugaloo.github.io/Vidaplus-legal/terms-of-service.en.html)
-- 🗑️ [Delete my account](https://jonnybugaloo.github.io/Vidaplus-legal/delete-account.en.html)
+- 📋 [Privacy Policy](https://vidaplus.github.io/Vidaplus-legal/privacy-policy.en.html)
+- 📜 [Terms of Service](https://vidaplus.github.io/Vidaplus-legal/terms-of-service.en.html)
+- 🗑️ [Delete my account](https://vidaplus.github.io/Vidaplus-legal/delete-account.en.html)
 
 ## Hosting
 
 These pages are served via **GitHub Pages** at:
-**https://jonnybugaloo.github.io/Vidaplus-legal/**
+**https://vidaplus.github.io/Vidaplus-legal/**
 
 ## Why a separate repo?
 
