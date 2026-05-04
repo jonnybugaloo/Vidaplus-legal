@@ -5,10 +5,12 @@ This repository hosts the public legal documents for the [Vida+](https://github.
 ## 🇧🇷 Português
 - 📋 [Política de Privacidade](https://jonnybugaloo.github.io/Vidaplus-legal/privacy-policy.html)
 - 📜 [Termos de Serviço](https://jonnybugaloo.github.io/Vidaplus-legal/terms-of-service.html)
+- 🗑️ [Excluir minha conta](https://jonnybugaloo.github.io/Vidaplus-legal/delete-account.html)
 
 ## 🇬🇧 English
 - 📋 [Privacy Policy](https://jonnybugaloo.github.io/Vidaplus-legal/privacy-policy.en.html)
 - 📜 [Terms of Service](https://jonnybugaloo.github.io/Vidaplus-legal/terms-of-service.en.html)
+- 🗑️ [Delete my account](https://jonnybugaloo.github.io/Vidaplus-legal/delete-account.en.html)
 
 ## Hosting
 

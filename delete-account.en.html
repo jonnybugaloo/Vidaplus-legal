@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete account · Vida+</title>
+<meta name="robots" content="noindex">
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 560px; margin: 0 auto; padding: 2.5rem 1.5rem;
+  line-height: 1.55; color: #222; background: #fafafa;
+}
+@media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #111; } }
+.lang-switch { position: absolute; top: 1rem; right: 1rem; font-size: .9rem; }
+.lang-switch a { color: #999; text-decoration: none; padding: .25rem .5rem; border-radius: 6px; }
+.lang-switch a.active { color: #c00; font-weight: 600; background: rgba(200,0,0,.08); }
+@media (prefers-color-scheme: dark) { .lang-switch a.active { color: #ff8a8a; background: rgba(255,138,138,.12); } }
+h1 { font-size: 1.6rem; margin: 0 0 .5rem; display: flex; align-items: center; gap: .5rem; }
+.warn-box { background: #fff5f5; border: 1px solid #f3c2c2; border-left: 4px solid #c00; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+@media (prefers-color-scheme: dark) { .warn-box { background: #2a1414; border-color: #5a2424; border-left-color: #f55; } }
+.warn-box ul { margin: .5rem 0 0; padding-left: 1.25rem; }
+.warn-box li { margin: .25rem 0; }
+form { background: #fff; border: 1px solid #e3e3e3; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem; }
+@media (prefers-color-scheme: dark) { form { background: #1c1c1c; border-color: #333; } }
+label { display: block; font-weight: 600; margin: 1rem 0 .35rem; font-size: .95rem; }
+input { width: 100%; padding: .65rem .8rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; background: #fff; color: inherit; }
+@media (prefers-color-scheme: dark) { input { background: #222; border-color: #444; } }
+input:focus { outline: 2px solid #c00; outline-offset: 1px; }
+.confirm-input { text-transform: uppercase; }
+button {
+  width: 100%; margin-top: 1.5rem; padding: .85rem 1rem; border: 0; border-radius: 8px;
+  background: #c00; color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .15s;
+}
+button:hover:not(:disabled) { background: #a00; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.cancel-link { display: block; text-align: center; margin-top: 1rem; color: #666; text-decoration: none; font-size: .9rem; }
+.cancel-link:hover { color: #c00; }
+.status { margin-top: 1.25rem; padding: .9rem 1rem; border-radius: 8px; font-size: .95rem; display: none; }
+.status.success { background: #e6f7ec; color: #14532d; border: 1px solid #b7e4c6; display: block; }
+.status.error { background: #fdecec; color: #7f1d1d; border: 1px solid #f3c2c2; display: block; }
+@media (prefers-color-scheme: dark) {
+  .status.success { background: #0e2e1a; color: #b8f0cc; border-color: #1a4d2e; }
+  .status.error { background: #2a1414; color: #ffb8b8; border-color: #5a2424; }
+}
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ddd; color: #888; font-size: .85rem; text-align: center; }
+@media (prefers-color-scheme: dark) { footer { border-color: #333; } }
+.muted { color: #888; font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="lang-switch">
+  <a href="./delete-account.html">PT</a> ·
+  <a href="./delete-account.en.html" class="active">EN</a>
+</div>
+
+<h1>🗑️ Delete your Vida+ account</h1>
+<p class="muted">Request the permanent deletion of your account and all your data.</p>
+
+<div class="warn-box">
+  <strong>⚠️ Warning: this action is permanent!</strong>
+  <ul>
+    <li>Your account and <strong>all data</strong> (habits, tasks, finances, reminders, profile) will be deleted from our servers</li>
+    <li>This cannot be undone or recovered later</li>
+    <li>Active Premium subscriptions <strong>are not auto-cancelled</strong> — cancel first via Google Play</li>
+    <li>The deletion runs <strong>immediately</strong> via secure server</li>
+  </ul>
+</div>
+
+<form id="delete-form" novalidate>
+  <label for="email">Account e-mail</label>
+  <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+
+  <label for="password">Your current password</label>
+  <input type="password" id="password" name="password" autocomplete="current-password" required placeholder="Enter your password">
+
+  <label for="confirmation">Type <strong>DELETE</strong> to confirm</label>
+  <input type="text" id="confirmation" name="confirmation" class="confirm-input" required placeholder="DELETE">
+
+  <button type="submit" id="submit-btn" disabled>Delete account permanently</button>
+  <a class="cancel-link" href="./index.html">Cancel and go back</a>
+
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+</form>
+
+<footer>
+  Questions? Email <a href="mailto:vidaplus.app@gmail.com">vidaplus.app@gmail.com</a><br>
+  In case of technical error, we can process manually within 30 days.
+</footer>
+
+<script>
+const SUPABASE_URL = 'https://vcnjwtejqfgikzqotlvl.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZjbmp3dGVqcWZnaWt6cW90bHZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2OTYxMzAsImV4cCI6MjA3NzI3MjEzMH0.TKeRsrxNHlOy9cbjlS_m8dGJeu6KHcgW3K4kDQe9g1o';
+
+const form = document.getElementById('delete-form');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const confirmationInput = document.getElementById('confirmation');
+const submitBtn = document.getElementById('submit-btn');
+const statusEl = document.getElementById('status');
+
+function syncSubmit() {
+  const ok = emailInput.value.trim() && passwordInput.value
+    && confirmationInput.value.trim().toUpperCase() === 'DELETE';
+  submitBtn.disabled = !ok;
+}
+[emailInput, passwordInput, confirmationInput].forEach((el) =>
+  el.addEventListener('input', syncSubmit)
+);
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (submitBtn.disabled) return;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Processing...';
+  statusEl.className = 'status';
+  statusEl.textContent = '';
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/functions/v1/delete-account`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      },
+      body: JSON.stringify({
+        email: emailInput.value.trim().toLowerCase(),
+        password: passwordInput.value,
+        confirmation: 'DELETE',
+      }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (res.ok && data.success) {
+      statusEl.className = 'status success';
+      statusEl.textContent = '✅ Your account and data have been permanently deleted. Thank you for using Vida+!';
+      form.querySelectorAll('input').forEach((el) => (el.disabled = true));
+      submitBtn.style.display = 'none';
+    } else {
+      statusEl.className = 'status error';
+      statusEl.textContent = '❌ ' + (data.error || `Error ${res.status}: could not delete.`);
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Delete account permanently';
+    }
+  } catch (err) {
+    statusEl.className = 'status error';
+    statusEl.textContent = '❌ Network error: ' + (err.message || 'try again.');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Delete account permanently';
+  }
+});
+</script>
+</body>
+</html>
