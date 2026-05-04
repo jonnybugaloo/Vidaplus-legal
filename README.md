@@ -1,9 +1,14 @@
 # Vida+ — Legal Documents
 
-This repository hosts the public legal documents for the [Vida+](https://github.com/jonnybugaloo/Vidaplus) wellness app:
+This repository hosts the public legal documents for the [Vida+](https://github.com/jonnybugaloo/Vidaplus) wellness app, available in two languages:
 
-- 📋 [Privacy Policy](https://jonnybugaloo.github.io/Vidaplus-legal/privacy-policy.html)
-- 📜 [Terms of Service](https://jonnybugaloo.github.io/Vidaplus-legal/terms-of-service.html)
+## 🇧🇷 Português
+- 📋 [Política de Privacidade](https://jonnybugaloo.github.io/Vidaplus-legal/privacy-policy.html)
+- 📜 [Termos de Serviço](https://jonnybugaloo.github.io/Vidaplus-legal/terms-of-service.html)
+
+## 🇬🇧 English
+- 📋 [Privacy Policy](https://jonnybugaloo.github.io/Vidaplus-legal/privacy-policy.en.html)
+- 📜 [Terms of Service](https://jonnybugaloo.github.io/Vidaplus-legal/terms-of-service.en.html)
 
 ## Hosting
 

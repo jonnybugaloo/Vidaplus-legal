@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Vida+</title>
+<meta name="description" content="Vida+ app Privacy Policy — LGPD/GDPR compliant.">
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem;
+  line-height: 1.65; color: #222; background: #fafafa;
+}
+@media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #111; } a { color: #7ab8ff; } }
+h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+h2 { margin-top: 2rem; padding-bottom: .35rem; border-bottom: 1px solid #ddd; }
+h3 { margin-top: 1.5rem; }
+@media (prefers-color-scheme: dark) { h2 { border-color: #333; } }
+.meta { color: #666; font-size: .95rem; margin-bottom: 1.5rem; }
+@media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { padding: .6rem .8rem; border: 1px solid #ddd; text-align: left; }
+th { background: #f0f0f0; }
+@media (prefers-color-scheme: dark) { th, td { border-color: #333; } th { background: #222; } }
+code { background: rgba(135,131,120,.15); padding: .15rem .4rem; border-radius: 4px; font-size: .92em; }
+ul li { margin: .25rem 0; }
+.nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: .5rem; }
+.nav a { text-decoration: none; color: #555; font-size: .95rem; }
+@media (prefers-color-scheme: dark) { .nav a { color: #aaa; } }
+.lang { display: flex; gap: .5rem; }
+.lang a { padding: .25rem .6rem; border: 1px solid #ddd; border-radius: 6px; }
+.lang a.active { background: #555; color: #fff; border-color: #555; }
+@media (prefers-color-scheme: dark) { .lang a { border-color: #444; } .lang a.active { background: #ddd; color: #111; border-color: #ddd; } }
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ddd; color: #888; font-size: .9rem; }
+@media (prefers-color-scheme: dark) { footer { border-color: #333; } }
+</style>
+</head>
+<body>
+<div class="nav">
+  <a href="./index.html">← Back</a>
+  <div class="lang">
+    <a href="./privacy-policy.html">🇧🇷 PT</a>
+    <a href="./privacy-policy.en.html" class="active">🇬🇧 EN</a>
+  </div>
+</div>
+
+<h1>Privacy Policy — Vida+</h1>
+<p class="meta"><strong>Last updated:</strong> May 2, 2026 · <strong>Version:</strong> 1.0</p>
+
+<h2>1. Introduction</h2>
+<p>Welcome to <strong>Vida+</strong> ("Application", "we", "our"). Vida+ is committed to protecting your privacy. This Privacy Policy explains our data privacy practices and the rights and choices you have regarding your data.</p>
+
+<h2>2. Information We Collect</h2>
+<h3>2.1 Data You Provide</h3>
+<ul>
+  <li><strong>Account &amp; Authentication:</strong> Email, password (encrypted), username</li>
+  <li><strong>Profile Data:</strong> Gender, age, weight (optional — only for hydration calculations)</li>
+  <li><strong>App Content:</strong> Tasks, habits, goals, financial notes, shopping list, well-being records (water intake, sleep, emotions)</li>
+</ul>
+<h3>2.2 Automatically Generated Data</h3>
+<ul>
+  <li><strong>Usage Logs:</strong> Actions within the app, habit/task completion times</li>
+  <li><strong>Device Permissions:</strong> Access to notifications, calendar, storage</li>
+  <li><strong>Technical Information:</strong> App version, Android version, anonymized device ID</li>
+</ul>
+<h3>2.3 Third-Party Data</h3>
+<ul><li><strong>Google Authentication:</strong> Verified email (if you sign in with Google)</li></ul>
+
+<h2>3. How We Use Your Data</h2>
+<ul>
+  <li>✅ Provide, maintain, and improve Vida+</li>
+  <li>✅ Sync your data across devices (via Supabase)</li>
+  <li>✅ Send reminder notifications (habits, tasks, shopping, well-being)</li>
+  <li>✅ Generate personalized insights and reports</li>
+  <li>✅ Respond to technical support</li>
+  <li>✅ Comply with legal obligations</li>
+</ul>
+
+<h2>4. Data Storage</h2>
+<h3>4.1 Local Data</h3>
+<ul>
+  <li>Automatically synced with our cloud</li>
+  <li>Remains on the device even when offline</li>
+  <li>Deleted when you uninstall the app</li>
+</ul>
+<h3>4.2 Cloud Data (Supabase PostgreSQL)</h3>
+<ul>
+  <li><strong>Database:</strong> PostgreSQL hosted on secure infrastructure</li>
+  <li><strong>Encryption:</strong> In transit (TLS 1.3) and at rest</li>
+  <li><strong>RLS (Row-Level Security):</strong> Only you can access your data</li>
+  <li><strong>Backups:</strong> Daily and stored in multiple regions</li>
+  <li><strong>Retention:</strong> Kept while your account is active</li>
+</ul>
+<h3>4.3 Deletion</h3>
+<ul>
+  <li>You can delete your account at any time</li>
+  <li>All data will be <strong>permanently deleted within 30 days</strong></li>
+  <li>Except data legally required (taxes, compliance)</li>
+</ul>
+
+<h2>5. Android Permissions</h2>
+<table>
+<thead><tr><th>Permission</th><th>Reason</th></tr></thead>
+<tbody>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Send reminder notifications</td></tr>
+<tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Schedule exact notifications (Android 12+)</td></tr>
+<tr><td><code>USE_EXACT_ALARM</code></td><td>Use exact alarms</td></tr>
+<tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-schedule notifications after reboot</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>Keep device awake during critical operations</td></tr>
+<tr><td><code>VIBRATE</code></td><td>Vibration on notifications</td></tr>
+</tbody>
+</table>
+<p>You can revoke permissions in <strong>Settings &gt; Apps &gt; Vida+ &gt; Permissions</strong>.</p>
+
+<h2>6. Data Sharing</h2>
+<p>Your data is <strong>NOT</strong> shared with:</p>
+<ul>
+  <li>❌ Advertisers or ad networks</li>
+  <li>❌ Social networks</li>
+  <li>❌ Third parties without consent</li>
+</ul>
+<p>Your data is shared with:</p>
+<ul>
+  <li>✅ <strong>Supabase</strong> (backend) — under processing agreement</li>
+  <li>✅ Legal authorities — when required</li>
+</ul>
+
+<h2>7. Security</h2>
+<ul>
+  <li>Authentication with encrypted password (bcrypt)</li>
+  <li>RLS (Row-Level Security) at user level</li>
+  <li>TLS 1.3 for transmission</li>
+  <li>JWT tokens with automatic expiration</li>
+  <li>Regular audits</li>
+</ul>
+
+<h2>8. Your Rights (LGPD/GDPR)</h2>
+<ul>
+  <li>📋 Access your data</li>
+  <li>✏️ Correct information</li>
+  <li>🗑️ Delete your account</li>
+  <li>📤 Export data</li>
+  <li>🚫 Object to processing</li>
+</ul>
+<p><strong>Contact:</strong> <a href="mailto:vidaplus.app@gmail.com">vidaplus.app@gmail.com</a></p>
+
+<h2>9. Retention</h2>
+<ul>
+  <li>Account Data: deleted 30 days after account removal</li>
+  <li>Logs: deleted after 90 days</li>
+  <li>Backups: up to 30 days after deletion</li>
+</ul>
+
+<h2>10. Changes</h2>
+<p>We may update this policy. You will be notified of material changes.</p>
+
+<footer>
+  <p>📧 <a href="mailto:vidaplus.app@gmail.com">vidaplus.app@gmail.com</a> · <a href="./terms-of-service.en.html">Terms of Service</a></p>
+</footer>
+</body>
+</html>
