@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Vida+</title>
+<meta name="description" content="Política de Privacidade do app Vida+ — LGPD/GDPR compliant.">
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem;
+  line-height: 1.65; color: #222; background: #fafafa;
+}
+@media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #111; } a { color: #7ab8ff; } }
+h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+h2 { margin-top: 2rem; padding-bottom: .35rem; border-bottom: 1px solid #ddd; }
+h3 { margin-top: 1.5rem; }
+@media (prefers-color-scheme: dark) { h2 { border-color: #333; } }
+.meta { color: #666; font-size: .95rem; margin-bottom: 1.5rem; }
+@media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { padding: .6rem .8rem; border: 1px solid #ddd; text-align: left; }
+th { background: #f0f0f0; }
+@media (prefers-color-scheme: dark) { th, td { border-color: #333; } th { background: #222; } }
+code { background: rgba(135,131,120,.15); padding: .15rem .4rem; border-radius: 4px; font-size: .92em; }
+ul li { margin: .25rem 0; }
+.nav { margin-bottom: 1.5rem; }
+.nav a { text-decoration: none; color: #555; font-size: .95rem; }
+@media (prefers-color-scheme: dark) { .nav a { color: #aaa; } }
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ddd; color: #888; font-size: .9rem; }
+@media (prefers-color-scheme: dark) { footer { border-color: #333; } }
+</style>
+</head>
+<body>
+<div class="nav"><a href="./index.html">← Voltar</a></div>
+
+<h1>Política de Privacidade — Vida+</h1>
+<p class="meta"><strong>Última atualização:</strong> 2 de maio de 2026 · <strong>Versão:</strong> 1.0</p>
+
+<h2>1. Introdução</h2>
+<p>Bem-vindo ao <strong>Vida+</strong> ("Aplicação", "nós", "nosso"). A Vida+ está comprometida em proteger sua privacidade. Esta Política explica nossas práticas de privacidade de dados e os direitos que você tem em relação aos seus dados.</p>
+
+<h2>2. Informações que Coletamos</h2>
+<h3>2.1 Dados que Você Fornece</h3>
+<ul>
+  <li><strong>Conta e Autenticação:</strong> Email, senha (criptografada), nome de usuário</li>
+  <li><strong>Dados de Perfil:</strong> Gênero, idade, peso (opcional — apenas para cálculos de hidratação)</li>
+  <li><strong>Conteúdo do Aplicativo:</strong> Tarefas, hábitos, metas, notas financeiras, lista de compras, registros de bem-estar (água, sono, emoções)</li>
+</ul>
+<h3>2.2 Dados Gerados Automaticamente</h3>
+<ul>
+  <li><strong>Logs de Uso:</strong> Ações dentro do app, horários de conclusão de hábitos/tarefas</li>
+  <li><strong>Permissões do Dispositivo:</strong> Acesso a notificações, calendário, armazenamento</li>
+  <li><strong>Informações Técnicas:</strong> Versão do app, versão do Android, device ID anonimizado</li>
+</ul>
+<h3>2.3 Dados de Terceiros</h3>
+<ul><li><strong>Autenticação Google:</strong> Email verificado (se usar login com Google)</li></ul>
+
+<h2>3. Como Usamos Seus Dados</h2>
+<ul>
+  <li>✅ Fornecer, manter e melhorar o Vida+</li>
+  <li>✅ Sincronizar seus dados entre dispositivos (via Supabase)</li>
+  <li>✅ Enviar notificações de lembretes (hábitos, tarefas, compras, bem-estar)</li>
+  <li>✅ Gerar insights e relatórios personalizados</li>
+  <li>✅ Responder a suporte técnico</li>
+  <li>✅ Cumprir obrigações legais</li>
+</ul>
+
+<h2>4. Armazenamento de Dados</h2>
+<h3>4.1 Dados Locais</h3>
+<ul>
+  <li>Sincronizados automaticamente com nossa nuvem</li>
+  <li>Permanecem no dispositivo mesmo desconectado</li>
+  <li>Deletados quando você remove o app</li>
+</ul>
+<h3>4.2 Dados na Nuvem (Supabase PostgreSQL)</h3>
+<ul>
+  <li><strong>Banco de Dados:</strong> PostgreSQL hospedado em infraestrutura segura</li>
+  <li><strong>Criptografia:</strong> Em trânsito (TLS 1.3) e em repouso</li>
+  <li><strong>RLS (Row-Level Security):</strong> Apenas você pode acessar seus dados</li>
+  <li><strong>Backups:</strong> Diários e armazenados em múltiplas regiões</li>
+  <li><strong>Retenção:</strong> Mantidos enquanto sua conta está ativa</li>
+</ul>
+<h3>4.3 Exclusão</h3>
+<ul>
+  <li>Você pode deletar sua conta a qualquer tempo</li>
+  <li>Todos os dados serão <strong>permanentemente deletados em 30 dias</strong></li>
+  <li>Exceto dados legalmente necessários (impostos, conformidade)</li>
+</ul>
+
+<h2>5. Permissões do Android</h2>
+<table>
+<thead><tr><th>Permissão</th><th>Motivo</th></tr></thead>
+<tbody>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Enviar notificações de lembretes</td></tr>
+<tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Agendar notificações exatas (Android 12+)</td></tr>
+<tr><td><code>USE_EXACT_ALARM</code></td><td>Usar alarmes exatos</td></tr>
+<tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-agendar notificações após reinicialização</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>Manter device acordado durante operações críticas</td></tr>
+<tr><td><code>VIBRATE</code></td><td>Vibração nas notificações</td></tr>
+</tbody>
+</table>
+<p>Você pode revogar permissões em <strong>Configurações &gt; Apps &gt; Vida+ &gt; Permissões</strong>.</p>
+
+<h2>6. Compartilhamento de Dados</h2>
+<p>Seus dados <strong>NÃO</strong> são compartilhados com:</p>
+<ul>
+  <li>❌ Anunciantes ou redes publicitárias</li>
+  <li>❌ Redes sociais</li>
+  <li>❌ Terceiros sem consentimento</li>
+</ul>
+<p>Seus dados são compartilhados com:</p>
+<ul>
+  <li>✅ <strong>Supabase</strong> (backend) — sob contrato de processamento</li>
+  <li>✅ Autoridades legais — quando obrigado</li>
+</ul>
+
+<h2>7. Segurança</h2>
+<ul>
+  <li>Autenticação com senha criptografada (bcrypt)</li>
+  <li>RLS (Row-Level Security) em nível de usuário</li>
+  <li>TLS 1.3 para transmissão</li>
+  <li>Tokens JWT com expiração automática</li>
+  <li>Auditorias regulares</li>
+</ul>
+
+<h2>8. Seus Direitos (LGPD/GDPR)</h2>
+<ul>
+  <li>📋 Acessar seus dados</li>
+  <li>✏️ Corrigir informações</li>
+  <li>🗑️ Deletar sua conta</li>
+  <li>📤 Exportar dados</li>
+  <li>🚫 Objetar processamento</li>
+</ul>
+<p><strong>Contato:</strong> <a href="mailto:vidaplus.app@gmail.com">vidaplus.app@gmail.com</a></p>
+
+<h2>9. Retenção</h2>
+<ul>
+  <li>Dados de Conta: deletados 30 dias após exclusão</li>
+  <li>Logs: deletados após 90 dias</li>
+  <li>Backups: até 30 dias após deleção</li>
+</ul>
+
+<h2>10. Mudanças</h2>
+<p>Podemos atualizar esta política. Você será notificado de mudanças materiais.</p>
+
+<footer>
+  <p>📧 <a href="mailto:vidaplus.app@gmail.com">vidaplus.app@gmail.com</a> · <a href="./terms-of-service.html">Termos de Serviço</a></p>
+</footer>
+</body>
+</html>
